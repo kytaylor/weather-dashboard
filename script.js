@@ -47,14 +47,14 @@ function displayCityInfo() {
   }).then(function(response) {
     console.log(response)
     
-    $(".city-name").text("City: " + response.name);
-    $(".wind").text("Wind speed: " + response.wind.speed);
-    $(".humidity").text("Humidity: " + response.main.humidity);
+    $(".city-name").text(response.name);
+    $(".wind").text(response.wind.speed);
+    $(".humidity").text(response.main.humidity);
 
     var tempK = response.main.temp;
     console.log(tempK)
     var tempF = (tempK - 273.15) * 1.80 + 32;
-    $(".temp").text("Temp (F): " + tempF);
+    $(".temp").text(tempF);
 
     console.log(response.coord.lat)
     console.log(response.coord.lon)
@@ -75,6 +75,8 @@ function forecast(x, y) {
   }).then(function(response) {
     console.log(response)
 
+    // UV index, double check later to ensure working properly
+    $(".uv-index").text(response.current.uvi);
   });
 }
 
