@@ -1,32 +1,5 @@
-// This is our API key. Add your own API key between the ""
+// API key
 var APIKey = "f899658bec757e89390b5ec8e203720c";
-
-// // Here we are building the URL we need to query the database
-// var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=Bujumbura,Burundi&appid=" + APIKey;
-
-// // We then created an AJAX call
-// $.ajax({
-//   url: queryURL,
-//   method: "GET"
-// }).then(function(response) {
-//   // Create CODE HERE to Log the queryURL
-//     console.log(queryURL)
-//     // Create CODE HERE to log the resulting object
-//     console.log(response)
-//     // Create CODE HERE to calculate the temperature (converted from Kelvin)
-//     $(".city").text("City: " + response.name);
-//     $(".wind").text("Wind speed: " + response.wind.speed);
-//     $(".humidity").text("Humidity: " + response.main.humidity);
-//     $(".temp").text("Temp (K): " + response.main.temp);
-//     // Create CODE HERE to transfer content to HTML
-//     // Hint: To convert from Kelvin to Fahrenheit: F = (K - 273.15) * 1.80 + 32
-//     var tempK = response.main.temp;
-//     console.log(tempK)
-//     var tempF = (tempK - 273.15) * 1.80 + 32;
-
-//     $(".temp2").text("Temp (F): " + tempF);
-//     // Create CODE HERE to dump the temperature content into HTML
-// });
 
 // ------------------------------------------------
 
@@ -38,6 +11,12 @@ $(".current-date").text(date);
 
 function displayCityInfo() {
   $("#cities-view").empty();
+  $(".icon").empty();
+  $(".icon-one").empty();
+  $(".icon-two").empty();
+  $(".icon-three").empty();
+  $(".icon-four").empty();
+  $(".icon-five").empty();
 
   var city = $(this).attr("data-name");
   console.log(city)
