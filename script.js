@@ -51,10 +51,7 @@ function displayCityInfo() {
     $(".wind").text(response.wind.speed);
     $(".humidity").text(response.main.humidity);
 
-    var tempK = response.main.temp;
-    console.log(tempK)
-    var tempF = (tempK - 273.15) * 1.80 + 32;
-    $(".temp").text(tempF);
+    $(".temp").text(tempConvert(response.main.temp));
 
     console.log(response.coord.lat)
     console.log(response.coord.lon)
@@ -77,7 +74,34 @@ function forecast(x, y) {
 
     // UV index, double check later to ensure working properly
     $(".uv-index").text(response.current.uvi);
+
+    // Day 1
+    $(".temp-one").text(tempConvert(response.daily[0].temp.day));
+    $(".humidity-one").text(response.daily[0].humidity);
+
+    // Day 2
+    $(".temp-two").text(tempConvert(response.daily[1].temp.day));
+    $(".humidity-two").text(response.daily[1].humidity);
+
+    // Day 3
+    $(".temp-three").text(tempConvert(response.daily[2].temp.day));
+    $(".humidity-three").text(response.daily[2].humidity);
+
+    // Day 4
+    $(".temp-four").text(tempConvert(response.daily[3].temp.day));
+    $(".humidity-four").text(response.daily[3].humidity);
+
+    // Day 5
+    $(".temp-five").text(tempConvert(response.daily[4].temp.day));
+    $(".humidity-five").text(response.daily[4].humidity);
   });
+}
+
+function tempConvert(x) {
+  var tempK = x;
+  console.log(x)
+  var tempF = (tempK - 273.15) * 1.80 + 32;
+  return tempF;
 }
 
 // Function for displaying movie data
