@@ -51,6 +51,12 @@ function displayCityInfo() {
     $(".wind").text(response.wind.speed);
     $(".humidity").text(response.main.humidity);
 
+    var icon = response.weather[0].icon;
+    var iconLink = "http://openweathermap.org/img/wn/" + icon + "@2x.png"
+    var newImg = $("<img>")
+    $(newImg).attr("src", iconLink);
+    $(".icon").append(newImg);
+
     var dayOneTemp = tempConvert(response.main.temp);
     var newTempOne = dayOneTemp.toFixed(2)
     $(".temp").text(newTempOne);
@@ -75,33 +81,76 @@ function forecast(x, y) {
     console.log(response)
 
     // UV index, double check later to ensure working properly
-    $(".uv-index").text(response.current.uvi);
+    var uvi = response.current.uvi;
+    $(".uv-index").text(uvi);
+    // Changing color of UV index depending on uvi value
+    if (uvi >= 0 && uvi <= 2) {
+      $(".uv-index").css({"backgroundColor" : "green"});
+    } else if (uvi >= 3 && uvi <= 5) {
+      $(".uv-index").css({"backgroundColor" : "yellow"});
+    } else if (uvi >= 6 && uvi <= 7) {
+      $(".uv-index").css({"backgroundColor" : "orange"});
+    } else if (uvi >= 8 && uvi <= 10) {
+      $(".uv-index").css({"backgroundColor" : "red"});
+    } else if (uvi >= 11) {
+      $(".uv-index").css({"backgroundColor" : "red"});
+    }
 
     // Day 1
+    var icon = response.daily[0].weather[0].icon;
+    var iconLink = "http://openweathermap.org/img/wn/" + icon + "@2x.png"
+    var newImg = $("<img>")
+    $(newImg).attr("src", iconLink);
+    $(".icon-one").append(newImg);
+
     var dayOneTemp = tempConvert(response.daily[0].temp.day);
     var newTempOne = dayOneTemp.toFixed(2)
     $(".temp-one").text(newTempOne);
     $(".humidity-one").text(response.daily[0].humidity);
 
     // Day 2
+    var icon = response.daily[1].weather[0].icon;
+    var iconLink = "http://openweathermap.org/img/wn/" + icon + "@2x.png"
+    var newImg = $("<img>")
+    $(newImg).attr("src", iconLink);
+    $(".icon-two").append(newImg);
+
     var dayTwoTemp = tempConvert(response.daily[1].temp.day);
     var newTempTwo = dayTwoTemp.toFixed(2)
     $(".temp-two").text(newTempTwo);
     $(".humidity-two").text(response.daily[1].humidity);
 
     // Day 3
+    var icon = response.daily[2].weather[0].icon;
+    var iconLink = "http://openweathermap.org/img/wn/" + icon + "@2x.png"
+    var newImg = $("<img>")
+    $(newImg).attr("src", iconLink);
+    $(".icon-three").append(newImg);
+
     var dayThreeTemp = tempConvert(response.daily[2].temp.day);
     var newTempThree = dayThreeTemp.toFixed(2)
     $(".temp-three").text(newTempThree);
     $(".humidity-three").text(response.daily[2].humidity);
 
     // Day 4
+    var icon = response.daily[3].weather[0].icon;
+    var iconLink = "http://openweathermap.org/img/wn/" + icon + "@2x.png"
+    var newImg = $("<img>")
+    $(newImg).attr("src", iconLink);
+    $(".icon-four").append(newImg);
+
     var dayFourTemp = tempConvert(response.daily[3].temp.day);
     var newTempFour = dayFourTemp.toFixed(2)
     $(".temp-four").text(newTempFour);
     $(".humidity-four").text(response.daily[3].humidity);
 
     // Day 5
+    var icon = response.daily[4].weather[0].icon;
+    var iconLink = "http://openweathermap.org/img/wn/" + icon + "@2x.png"
+    var newImg = $("<img>")
+    $(newImg).attr("src", iconLink);
+    $(".icon-five").append(newImg);
+
     var dayFiveTemp = tempConvert(response.daily[4].temp.day);
     var newTempFive = dayFiveTemp.toFixed(2)
     $(".temp-five").text(newTempFive);
