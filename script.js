@@ -51,7 +51,9 @@ function displayCityInfo() {
     $(".wind").text(response.wind.speed);
     $(".humidity").text(response.main.humidity);
 
-    $(".temp").text(tempConvert(response.main.temp));
+    var dayOneTemp = tempConvert(response.main.temp);
+    var newTempOne = dayOneTemp.toFixed(2)
+    $(".temp").text(newTempOne);
 
     console.log(response.coord.lat)
     console.log(response.coord.lon)
@@ -76,23 +78,33 @@ function forecast(x, y) {
     $(".uv-index").text(response.current.uvi);
 
     // Day 1
-    $(".temp-one").text(tempConvert(response.daily[0].temp.day));
+    var dayOneTemp = tempConvert(response.daily[0].temp.day);
+    var newTempOne = dayOneTemp.toFixed(2)
+    $(".temp-one").text(newTempOne);
     $(".humidity-one").text(response.daily[0].humidity);
 
     // Day 2
-    $(".temp-two").text(tempConvert(response.daily[1].temp.day));
+    var dayTwoTemp = tempConvert(response.daily[1].temp.day);
+    var newTempTwo = dayTwoTemp.toFixed(2)
+    $(".temp-two").text(newTempTwo);
     $(".humidity-two").text(response.daily[1].humidity);
 
     // Day 3
-    $(".temp-three").text(tempConvert(response.daily[2].temp.day));
+    var dayThreeTemp = tempConvert(response.daily[2].temp.day);
+    var newTempThree = dayThreeTemp.toFixed(2)
+    $(".temp-three").text(newTempThree);
     $(".humidity-three").text(response.daily[2].humidity);
 
     // Day 4
-    $(".temp-four").text(tempConvert(response.daily[3].temp.day));
+    var dayFourTemp = tempConvert(response.daily[3].temp.day);
+    var newTempFour = dayFourTemp.toFixed(2)
+    $(".temp-four").text(newTempFour);
     $(".humidity-four").text(response.daily[3].humidity);
 
     // Day 5
-    $(".temp-five").text(tempConvert(response.daily[4].temp.day));
+    var dayFiveTemp = tempConvert(response.daily[4].temp.day);
+    var newTempFive = dayFiveTemp.toFixed(2)
+    $(".temp-five").text(newTempFive);
     $(".humidity-five").text(response.daily[4].humidity);
   });
 }
