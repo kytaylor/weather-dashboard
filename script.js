@@ -75,7 +75,7 @@ function forecast(x, y) {
     } else if (uvi >= 8 && uvi <= 10) {
       $(".uv-index").css({"backgroundColor" : "red"});
     } else if (uvi >= 11) {
-      $(".uv-index").css({"backgroundColor" : "red"});
+      $(".uv-index").css({"backgroundColor" : "purple"});
     }
 
     // Day 1
