@@ -26,7 +26,6 @@ var date = moment().add(5, 'days').format("MM/DD/YYYY");
 $(".card-date-five").text(date);
 
 function displayCityInfo() {
-  $("#cities-view").empty();
   $(".icon").empty();
   $(".icon-one").empty();
   $(".icon-two").empty();
@@ -95,9 +94,6 @@ function forecast(x, y) {
     }
 
     // Day 1
-    var date = moment().add(1, 'days').format("MM/DD/YYYY");
-    $(".card-date-one").text(date);
-
     var icon = response.daily[0].weather[0].icon;
     var iconLink = "http://openweathermap.org/img/wn/" + icon + "@2x.png"
     var newImg = $("<img>")
@@ -110,9 +106,6 @@ function forecast(x, y) {
     $(".humidity-one").text(response.daily[0].humidity);
 
     // Day 2
-    var date = moment().add(2, 'days').format("MM/DD/YYYY");
-    $(".card-date-two").text(date);
-
     var icon = response.daily[1].weather[0].icon;
     var iconLink = "http://openweathermap.org/img/wn/" + icon + "@2x.png"
     var newImg = $("<img>")
@@ -125,9 +118,6 @@ function forecast(x, y) {
     $(".humidity-two").text(response.daily[1].humidity);
 
     // Day 3
-    var date = moment().add(3, 'days').format("MM/DD/YYYY");
-    $(".card-date-three").text(date);
-
     var icon = response.daily[2].weather[0].icon;
     var iconLink = "http://openweathermap.org/img/wn/" + icon + "@2x.png"
     var newImg = $("<img>")
@@ -140,9 +130,6 @@ function forecast(x, y) {
     $(".humidity-three").text(response.daily[2].humidity);
 
     // Day 4
-    var date = moment().add(4, 'days').format("MM/DD/YYYY");
-    $(".card-date-four").text(date);
-
     var icon = response.daily[3].weather[0].icon;
     var iconLink = "http://openweathermap.org/img/wn/" + icon + "@2x.png"
     var newImg = $("<img>")
@@ -155,9 +142,6 @@ function forecast(x, y) {
     $(".humidity-four").text(response.daily[3].humidity);
 
     // Day 5
-    var date = moment().add(5, 'days').format("MM/DD/YYYY");
-    $(".card-date-five").text(date);
-
     var icon = response.daily[4].weather[0].icon;
     var iconLink = "http://openweathermap.org/img/wn/" + icon + "@2x.png"
     var newImg = $("<img>")

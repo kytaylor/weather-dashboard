@@ -3,18 +3,103 @@
     margin: 0;
 }
 
+body {
+    background-color: #00B285;
+}
+
+.background{
+    background-color: #222;
+    padding: 150px 0;
+    transform: skew(0deg, -10deg);
+    margin-top: -150px;
+}
+
+.content{
+    transform: skew(0deg, 10deg);
+}
+
 .uv-index {
     color: white;
+}
+
+h1 {
+    margin: 5px;
+    color: white;
+}
+
+#city-form {
+    color: white;
+    background-color: rgba(131,58,180,1);
+    display: flex;
+    flex-wrap: wrap;
+    padding: 5px;
+    margin: 5px;
+}
+
+form input, form button {
+    border: 5px solid white;
+    background-color: white;
+    font-weight: bold;
+}
+
+form button {
+    color: rgba(131,58,180,1);
+    background-color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+form button:hover {
+    color: white;
+    background-color: rgba(131,58,180,1);
+}
+
+form label {
+    padding: 5px;
+}
+
+#buttons-view {
+    /* margin: 5px; */
+}
+
+.city {
+    margin: 5px;
+    border: 5px solid rgba(131,58,180,1);
+    color: white;
+    background-color: rgba(131,58,180,1);
+    padding: 5px 13.5px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.city:hover {
+    border: 5px solid rgba(131,58,180,1);
+    color: rgba(131,58,180,1);
+    background-color: white;
 }
 
 .current-day-forecast {
     color: white;
     background-color: rgba(131,58,180,1);
     padding: 10px;
+    margin: 5px;
 }
 
 .card {
     color: white;
     background-color: rgba(131,58,180,1);
     padding: 10px;
+    margin: 5px;
+    width: 150px;
+    height: 168px;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
