@@ -3,14 +3,14 @@ var APIKey = "f899658bec757e89390b5ec8e203720c";
 
 // ------------------------------------------------
 // Retrieves last searched info from local storage and displays it
-// $(".city-name").text(localStorage.getItem("weather-city"));
-// $(".wind").text(localStorage.getItem("weather-wind"));
-// $(".humidity").text(localStorage.getItem("weather-humidity"));
-// var newImg = $("<img>")
-// $(newImg).attr("src", localStorage.getItem("weather-icon"));
-// $(".icon").append(newImg);
-// $(".uv-index").text(localStorage.getItem("weather-uvi"));
-// uviColor(localStorage.getItem("weather-uvi"));
+$(".city-name").text(localStorage.getItem("weather-city"));
+$(".wind").text(localStorage.getItem("weather-wind"));
+$(".humidity").text(localStorage.getItem("weather-humidity"));
+var newImg = $("<img>")
+$(newImg).attr("src", localStorage.getItem("weather-icon"));
+$(".icon").append(newImg);
+$(".uv-index").text(localStorage.getItem("weather-uvi"));
+uviColor(localStorage.getItem("weather-uvi"));
 
 $(".temp-one").text(localStorage.getItem("day-one-temp"));
 $(".humidity-one").text(localStorage.getItem("day-one-humidity"));
@@ -45,7 +45,7 @@ $(".icon-five").append(newImg);
 // ------------------------------------------------
 
 // Initial array of cities
-var cities = ["Portland", "Hollywood"];
+var cities = [];
 
 // Setting dates
 var date = moment().format("MM/DD/YYYY");

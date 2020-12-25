@@ -9,13 +9,13 @@ body {
 
 .background{
     background-color: #222;
-    padding: 150px 0;
-    transform: skew(0deg, -10deg);
-    margin-top: -150px;
+    padding: 1px 0;
+    transform: skew(0deg, -13deg);
+    margin-top: -1px;
 }
 
 .content{
-    transform: skew(0deg, 10deg);
+    transform: skew(0deg, 13deg);
 }
 
 .uv-index {
@@ -29,6 +29,10 @@ h1 {
 
 p {
     margin-top: 5px;
+}
+
+#buttons-view {
+    height: 48.4px;
 }
 
 #city-form {
