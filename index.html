@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather Dashboard</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <link rel="stylesheet" href="./style.css"/>
 </head>
 <body>
@@ -12,7 +11,6 @@
         <label for="city-input">Search a city</label>
         <input type="text" id="city-input"><br>
   
-        <!-- Button triggers new city to be added -->
         <input id="add-city" type="submit" value="Search">
     </form>
 
@@ -20,59 +18,52 @@
 
     <div id="cities-view"></div>
 
-    <h1><span class="city-name"></span> <span class="current-date"></span></h1>
-    <div class="icon"></div>
-    <p>Temperature: <span class="temp"></span> &deg;F</p>
-    <p>Humidity: <span class="humidity"></span>%</p>
-    <p>Wind speed: <span class="wind"></span> MPH</p>
-    <p>UV Index: <span class="uv-index"></span></p>
+    <div class="current-day-forecast">
+      <h1><span class="current-date"></span></h1>
+      <h1><span class="city-name"></span></h1>
+      <div class="icon"></div>
+      <p>Temperature: <span class="temp"></span> &deg;F</p>
+      <p>Humidity: <span class="humidity"></span>%</p>
+      <p>Wind speed: <span class="wind"></span> MPH</p>
+      <p>UV Index: <span class="uv-index"></span></p>
+    </div>
 
     <h1>5-Day Forecast:</h1>
 
-    <div class="card" style="width: 18rem;">
-        <div class="card-body">
-          <h5 class="card-date-one">Card title<span class="date-one"></span></h5>
-          <div class="icon-one"></div>
-          <p class="card-text">Temp: <span class="temp-one"></span> &deg;F</p>
-          <p class="card-text">Humidity: <span class="humidity-one"></span>%</p>
-        </div>
+      <div class="card">
+        <h2 class="card-date-one"><span class="date-one"></span></h2>
+        <div class="icon-one"></div>
+        <p class="card-text">Temp: <span class="temp-one"></span> &deg;F</p>
+        <p class="card-text">Humidity: <span class="humidity-one"></span>%</p>
+      </div>
+
+    <div class="card">
+      <h2 class="card-date-two"><span class="date-two"></span></h2>
+      <div class="icon-two"></div>
+      <p class="card-text">Temp: <span class="temp-two"></span> &deg;F</p>
+      <p class="card-text">Humidity: <span class="humidity-two"></span>%</p>
     </div>
 
-    <div class="card" style="width: 18rem;">
-      <div class="card-body">
-        <h5 class="card-date-two">Card title<span class="date-two"></span></h5>
-        <div class="icon-two"></div>
-        <p class="card-text">Temp: <span class="temp-two"></span> &deg;F</p>
-        <p class="card-text">Humidity: <span class="humidity-two"></span>%</p>
-      </div>
-  </div>
-
-  <div class="card" style="width: 18rem;">
-    <div class="card-body">
-      <h5 class="card-date-three">Card title<span class="date-three"></span></h5>
+    <div class="card">
+      <h2 class="card-date-three"><span class="date-three"></span></h2>
       <div class="icon-three"></div>
       <p class="card-text">Temp: <span class="temp-three"></span> &deg;F</p>
       <p class="card-text">Humidity: <span class="humidity-three"></span>%</p>
     </div>
-  </div>
 
-  <div class="card" style="width: 18rem;">
-    <div class="card-body">
-      <h5 class="card-date-four">Card title<span class="date-four"></span></h5>
+    <div class="card">
+      <h2 class="card-date-four"><span class="date-four"></span></h2>
       <div class="icon-four"></div>
       <p class="card-text">Temp: <span class="temp-four"></span> &deg;F</p>
       <p class="card-text">Humidity: <span class="humidity-four"></span>%</p>
     </div>
-  </div>
 
-  <div class="card" style="width: 18rem;">
-    <div class="card-body">
-      <h5 class="card-date-five">Card title<span class="date-five"></span></h5>
+    <div class="card">
+      <h2 class="card-date-five"><span class="date-five"></span></h2>
       <div class="icon-five"></div>
       <p class="card-text">Temp: <span class="temp-five"></span> &deg;F</p>
       <p class="card-text">Humidity: <span class="humidity-five"></span>%</p>
     </div>
-  </div>
 
 
 

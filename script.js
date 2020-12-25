@@ -6,8 +6,24 @@ var APIKey = "f899658bec757e89390b5ec8e203720c";
 // Initial array of cities
 var cities = ["Portland", "Hollywood"];
 
+// Setting dates
 var date = moment().format("MM/DD/YYYY");
 $(".current-date").text(date);
+
+var date = moment().add(1, 'days').format("MM/DD/YYYY");
+$(".card-date-one").text(date);
+
+var date = moment().add(2, 'days').format("MM/DD/YYYY");
+$(".card-date-two").text(date);
+
+var date = moment().add(3, 'days').format("MM/DD/YYYY");
+$(".card-date-three").text(date);
+
+var date = moment().add(4, 'days').format("MM/DD/YYYY");
+$(".card-date-four").text(date);
+
+var date = moment().add(5, 'days').format("MM/DD/YYYY");
+$(".card-date-five").text(date);
 
 function displayCityInfo() {
   $("#cities-view").empty();
