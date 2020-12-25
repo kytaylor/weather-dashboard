@@ -27,6 +27,10 @@ h1 {
     color: white;
 }
 
+p {
+    margin-top: 5px;
+}
+
 #city-form {
     color: white;
     background-color: rgba(131,58,180,1);
@@ -56,10 +60,6 @@ form button:hover {
 
 form label {
     padding: 5px;
-}
-
-#buttons-view {
-    /* margin: 5px; */
 }
 
 .city {
@@ -95,11 +95,17 @@ form label {
     padding: 10px;
     margin: 5px;
     width: 150px;
-    height: 168px;
+    height: 178px;
 }
 
 .cards {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+}
+
+.uv-index {
+    padding: 4px;
+    border: 2px solid white;
+    border-radius: 4px;
 }
