@@ -6,4 +6,4 @@ https://kytaylor.github.io/weather-dashboard/
 
 ## Images
 
-![Image1]()
+![Image1](https://github.com/kytaylor/weather-dashboard/blob/main/Screenshot%202020-12-24%20182932.png)
